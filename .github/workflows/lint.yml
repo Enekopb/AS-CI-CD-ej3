@@ -1,0 +1,20 @@
+name: Run Linter on Pull Request
+
+on:
+  pull_request:
+    branches:
+      - '*' # Se ejecuta en cualquier rama al hacer un pull request
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Run Linter
+        uses: advanced-security/python-lint-code-scanning-action@v1
+        with:
+          linter: pylint
+          additional_parameter: "tu_parametro_aqui"
