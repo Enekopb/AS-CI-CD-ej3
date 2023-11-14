@@ -15,7 +15,3 @@ jobs:
       - name: Ejecutar el codigo
         run: pytest test.py
 
-      - name: Crear imagen Docker
-        run:  docker build -t ulopeznovoa/holamundo .
-      - name: Probar imagen
-        run: docker run ulopeznovoa/holamundo
