@@ -8,7 +8,7 @@ def test_getbalance():
 def test_removebalance():
     obj = Wallet(50)
     obj.remove_balance(20)
-    assert obj.get_balance() == 35
+    assert obj.get_balance() == 30
 
 def test_setbalance():
     obj = Wallet(0)
