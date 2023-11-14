@@ -1,17 +1,19 @@
 name: Ej1
 
-on: push
+on: 
+  push:
+    branches:
+      - main
 
 jobs:
-  tareas:
+  test:
     runs-on: ubuntu-latest
     steps:
       - name: Descargar el codigo
         uses: actions/checkout@v4
-
+        
       - name: Instalar pytest
         run: pip install pytest
 
       - name: Ejecutar el codigo
         run: pytest test.py
-
