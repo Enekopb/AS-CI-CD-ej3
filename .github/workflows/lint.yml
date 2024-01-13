@@ -1,4 +1,4 @@
-name: Run Linter on Pull Request
+name: Python Code Quality
 
 on:
   pull_request:
@@ -6,15 +6,15 @@ on:
       - '*' # Se ejecuta en cualquier rama al hacer un pull request
 
 jobs:
-  lint:
+  tareas:
     runs-on: ubuntu-latest
-
+    permissions:
+      security-events: write
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2
-
-      - name: Run Linter
+        uses: actions/checkout@v4
+        
+      - name: advanced-security/python-lint-code-scanning-action@v1
         uses: advanced-security/python-lint-code-scanning-action@v1
         with:
           linter: pylint
-          additional_parameter: "tu_parametro_aqui" 
