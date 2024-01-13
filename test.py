@@ -20,5 +20,3 @@ def test_incrementbalanec():
     obj.set_balance(10) 
     obj.increment_balance()
     assert obj.get_balance() == 1010
-
-#Cambiar algo para el pull_request
