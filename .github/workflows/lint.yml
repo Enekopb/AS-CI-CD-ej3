@@ -17,4 +17,4 @@ jobs:
         uses: advanced-security/python-lint-code-scanning-action@v1
         with:
           linter: pylint
-          additional_parameter: "tu_parametro_aqui"
+          additional_parameter: "tu_parametro_aqui" 
